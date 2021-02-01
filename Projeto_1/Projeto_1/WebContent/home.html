@@ -1,0 +1,34 @@
+<h1 id="title" class="text-center"> Locadora </h1>
+<form id="frmLogin" class="form-horizontal">
+	Email: <input class="form-control" type="text" name="user" id="user" value="" placeholder="Usuário"><br>
+	Senha: <input class="form-control" type="password" name="pass" id="pass" value="" placeholder="Senha"><br>
+	<input type="button" class="btn btn-primary" id="btnSendFrmLogin" value="Enviar"><br/> <br/>
+	<h5 class="text-center">  <a href="cadastro.jsp" class="primary"> Clique aqui para de cadastrar </a> </h5>
+	<div id="msgLogin" class="text-center" ></div>
+</form>
+
+
+
+<script type="text/javascript">
+	
+	$(document).ready( 
+		function() {
+			$("#btnSendFrmLogin").click(
+					function() {
+						
+						var formData = $("#frmLogin").serialize();
+						$.post( "testeForm.jsp", formData, function( data, status ) {
+								var objReturn = $.parseJSON( data );
+								if ( objReturn.login == "true" ){
+									window.location.href = "privateAccess.jsp";
+								}else{
+									$("#msgLogin").html("Usuário ou Senha inválido");
+								}
+							}
+						);	
+					}		
+				);
+		} 
+	);
+	
+</script>

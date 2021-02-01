@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Locadora</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		
+		<style>
+			#title{
+				margin-top:100px;
+			}
+		
+			#msgLogin{
+			    margin-top: 350px;
+				margin-left: 600px;
+				color:red;
+			}
+		
+			#frmLogin{
+				width: 400px;
+				position: absolute;
+				margin-top: 50px;
+				margin-left: 500px;
+			}
+		</style>
+	</head>
+
+	<body class="body" id="body">
+		<header></header>
+		<nav></nav>
+		<section id="content"></section>
+		<footer></footer>
+	
+		<script type="text/javascript">	
+			$(document).ready( 
+				function() {
+					$("#content").load("home.html");;
+				} 		
+			);
+		</script>	
+	</body>
+</html>
